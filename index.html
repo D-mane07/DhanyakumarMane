@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#" class="resume-btn" onclick="downloadResume()" id="resume-btn">📄 Resume</a>
+    
+    <div class="container">
+        <div class="header">
+            <span class="changing-emoji" id="changingEmoji">🚀</span>
+            <h1 class="name" id="name">Name</h1>
+            <div class="role" id="role">Role</div>
+            <div class="contact-info" id="contact-info">
+                Contact Information
+            </div>
+        </div>
+        
+        <div class="first-row">
+            <div class="card">
+                <div class="card-title" id="about-title">🧑‍💻 About</div>
+                <div class="card-content" id="about-content">
+                    Loading...
+                </div>
+            </div>
+            
+            <div class="card music-player">
+                <div class="card-title" id="music-title">🎵 Music</div>
+                <div class="music-artwork" id="music-artwork">🎵</div>
+                <div class="music-info" id="music-info">Coding vibes</div>
+                <div class="player-controls">
+                    <button class="control-btn" onclick="playMusic()">Play</button>
+                    <button class="control-btn" onclick="pauseMusic()">Pause</button>
+                    <button class="control-btn" onclick="nextTrack()">Next</button>
+                </div>
+                <div class="track-info" id="current-track">
+                    Click play to start
+                </div>
+                <audio id="audioPlayer" loop></audio>
+            </div>
+            
+            <div class="card">
+                <div class="card-title" id="education-title">🎓 Education</div>
+                <div class="card-content" id="education-content">
+                    Loading...
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title" id="location-title">📍 Location</div>
+                <div class="card-content">
+                    <div class="location-info" id="location-info">
+                        Loading...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-section">
+            <div class="card">
+                <div class="card-title" id="skills-title">🛠️ Technical Skills</div>
+                <div class="skills-list" id="skills-list">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        
+        <div class="experience-section">
+            <div class="card">
+                <div class="card-title" id="experience-title">💼 Experience</div>
+                <div class="card-content" id="experience-container">
+                    Loading...
+                </div>
+                <button class="load-more-btn" id="load-more-experience" onclick="loadMoreExperience()" style="display: none;">
+                    Load More Experience
+                </button>
+            </div>
+        </div>
+
+        <div class="github-section">
+            <div class="card">
+                <div class="card-title" id="github-title">🐙 GitHub Activity</div>
+                <div class="card-content">
+                    <div class="github-stats">
+                        <span>Past Year Contributions</span>
+                        <span id="total-contributions">Loading...</span>
+                    </div>
+                    <div class="github-contributions" id="github-contributions"></div>
+                    <div class="github-legend">
+                        <span>Less</span>
+                        <div class="legend-item">
+                            <div class="legend-square contribution-0"></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-square contribution-1"></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-square contribution-2"></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-square contribution-3"></div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-square contribution-4"></div>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projects-section">
+            <div class="card">
+                <div class="card-title" id="projects-title">🚀 Projects</div>
+                <div class="projects-grid" id="projects-container">
+                    Loading...
+                </div>
+                <button class="load-more-btn" id="load-more-projects" onclick="loadMoreProjects()" style="display: none;">
+                    Load More Projects
+                </button>
+            </div>
+        </div>
+        
+        <div class="achievements-section">
+            <div class="card">
+                <div class="card-title" id="achievements-title">🏆 Achievements</div>
+                <div class="achievements-grid" id="achievements-container">
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
